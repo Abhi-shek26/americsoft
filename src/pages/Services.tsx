@@ -5,6 +5,7 @@ import Hero from "@/components/shared/Hero";
 import Section from "@/components/shared/Section";
 import CTABand from "@/components/shared/CTABand";
 import FadeInView from "@/components/shared/FadeInView";
+import BackgroundImage from "@/components/shared/BackgroundImage";
 
 const services = [
   {
@@ -89,27 +90,67 @@ const Services = () => {
               <motion.div
                 whileHover={{ scale: 1.01 }}
                 transition={{ duration: 0.2 }}
-                className="bg-card rounded-2xl border border-border p-6 lg:p-8 hover:border-accent/30 hover:shadow-lg transition-all duration-300"
+                className="relative rounded-2xl border border-border p-6 lg:p-8 hover:border-accent/30 hover:shadow-lg transition-all duration-300 overflow-hidden"
               >
-                <div className="flex flex-col lg:flex-row lg:items-start gap-6">
-                  <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
-                    <service.icon className="h-7 w-7 text-accent" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl lg:text-2xl font-bold mb-4 text-foreground">
-                      {service.title}
-                    </h3>
-                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      {service.items.map((item, itemIndex) => (
-                        <li
-                          key={itemIndex}
-                          className="flex items-center gap-2 text-muted-foreground"
-                        >
-                          <ArrowRight className="h-4 w-4 text-accent shrink-0" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+                {/* Background images */}
+                {index === 0 && (
+                  <BackgroundImage
+                    imageUrl="/generated_images/ai_agentic_platforms_visual.png"
+                    overlay="dark"
+                    overlayOpacity={50}
+                  />
+                )}
+                {index === 1 && (
+                  <BackgroundImage
+                    imageUrl="/generated_images/multi-llm_orchestration_visual.png"
+                    overlay="dark"
+                    overlayOpacity={50}
+                  />
+                )}
+                {index === 2 && (
+                  <BackgroundImage
+                    imageUrl="/generated_images/federal_data_foundations_visual.png"
+                    overlay="dark"
+                    overlayOpacity={50}
+                  />
+                )}
+                {index === 3 && (
+                  <BackgroundImage
+                    imageUrl="/generated_images/cloud_modernization_visual.png"
+                    overlay="dark"
+                    overlayOpacity={50}
+                  />
+                )}
+                {index === 4 && (
+                  <BackgroundImage
+                    imageUrl="/generated_images/security_governance_visual.png"
+                    overlay="dark"
+                    overlayOpacity={50}
+                  />
+                )}
+
+                {/* Content container */}
+                <div className="relative z-10 p-6 lg:p-8">
+                  <div className="flex flex-col lg:flex-row lg:items-start gap-6">
+                    <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
+                      <service.icon className="h-7 w-7 text-accent" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl lg:text-2xl font-bold mb-4 text-cyan-glow font-display">
+                        {service.title}
+                      </h3>
+                      <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        {service.items.map((item, itemIndex) => (
+                          <li
+                            key={itemIndex}
+                            className="flex items-center gap-2 text-white/80 text-sm lg:text-base"
+                          >
+                            <ArrowRight className="h-4 w-4 text-cyan shrink-0" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </motion.div>

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedBackground from "./AnimatedBackground";
+import BackgroundImage from "./BackgroundImage";
 import HeroIllustration from "./HeroIllustration";
 
 interface HeroProps {
@@ -29,7 +30,14 @@ const Hero = ({
 }: HeroProps) => {
   return (
     <section className="relative overflow-hidden bg-hero">
-      {/* Animated Background */}
+      {/* AI background image (bottom layer) */}
+      <BackgroundImage
+        imageUrl="/generated_images/federal_ai_network_visualization.png"
+        overlay="dark"
+        overlayOpacity={45}
+      />
+
+      {/* Animated Background (tech mesh, orbs, etc.) */}
       <AnimatedBackground variant="hero" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">

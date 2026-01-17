@@ -8,6 +8,7 @@ import PPTRTable from "@/components/shared/PPTRTable";
 import CTABand from "@/components/shared/CTABand";
 import FadeInView from "@/components/shared/FadeInView";
 import AnimatedCounter from "@/components/shared/AnimatedCounter";
+import BackgroundImage from "@/components/shared/BackgroundImage";
 import { PILLARS, FEDERAL_READY, WHY_AMERICSOFT, INDUSTRIES, SITE } from "@/content/site";
 
 const industryIcons = [Building2, Briefcase, HeartPulse, Truck];
@@ -80,18 +81,25 @@ const Index = () => {
           </FadeInView>
 
           <FadeInView delay={0.2} direction="right">
-            <div className="bg-hero rounded-2xl p-6 sm:p-8 lg:p-10">
-              <h3 className="text-xl sm:text-2xl font-bold text-primary-foreground mb-4 sm:mb-6">
-                Why AmericSoft
-              </h3>
-              <ul className="space-y-3 sm:space-y-4">
-                {WHY_AMERICSOFT.map((item, index) => (
-                  <li key={index} className="flex items-start gap-3 text-primary-foreground/80 text-sm sm:text-base">
-                    <div className="w-2 h-2 rounded-full bg-accent mt-2 shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+            <div className="relative rounded-2xl p-6 sm:p-8 lg:p-10 overflow-hidden">
+              <BackgroundImage
+                imageUrl="/generated_images/federal_capabilities_section_background.png"
+                overlay="dark"
+                overlayOpacity={50}
+              />
+              <div className="relative z-10">
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 font-display">
+                  Why AmericSoft
+                </h3>
+                <ul className="space-y-3 sm:space-y-4">
+                  {WHY_AMERICSOFT.map((item, index) => (
+                    <li key={index} className="flex items-start gap-3 text-white/80 text-sm sm:text-base">
+                      <div className="w-2 h-2 rounded-full bg-cyan-glow mt-2 shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </FadeInView>
         </div>

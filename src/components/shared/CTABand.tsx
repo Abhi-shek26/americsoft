@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import BackgroundImage from "./BackgroundImage";
 
 interface CTABandProps {
   title: string;
@@ -22,6 +23,15 @@ const CTABand = ({
 
   return (
     <section className={`relative overflow-hidden ${isAccent ? "bg-hero" : "bg-muted/50"}`}>
+      {/* AI Background Image */}
+      {isAccent && (
+        <BackgroundImage
+          imageUrl="/generated_images/services_page_tech_background.png"
+          overlay="dark"
+          overlayOpacity={40}
+        />
+      )}
+      
       {/* Animated background */}
       {isAccent && (
         <>
@@ -53,7 +63,7 @@ const CTABand = ({
               {title}
             </h2>
             {description && (
-              <p className={`text-base sm:text-lg ${isAccent ? "text-white/70" : "text-muted-foreground"}`}>
+              <p className={`text-base sm:text-lg ${isAccent ? "text-white/80" : "text-muted-foreground"}`}>
                 {description}
               </p>
             )}

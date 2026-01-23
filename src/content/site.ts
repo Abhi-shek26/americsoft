@@ -1,17 +1,20 @@
 // AmericSoft Brand Constants
 export const SITE = {
   name: "AmericSoft Solutions",
-  tagline: "Federal AI & Agentic Systems Engineering",
+  tagline: "AmericSoft Federal — IT Products & Services",
   foundedYear: 2002,
-  email: "contact@americsoft.com",
-  phone: "(555) 123-4567",
-  description: "Secure • Governed • Mission-Ready AI for Federal & Regulated Environments",
+  email: "human.resources@americsoft.com",
+  phone: "(770) 858-5756",
+  description: "Federal IT Products & Services | Defense • Aviation • Financial • Public Health",
+  address: "11340 Lakefield Dr, STE#200",
+  location: "Johns Creek, GA 30097, United States",
 };
 
 export const NAV_LINKS = [
   { name: "Home", href: "/" },
+  { name: "Capability Statement", href: "/capability-statement" },
   { name: "Services", href: "/services" },
-  { name: "Federal & Regulated", href: "/federal" },
+  { name: "Federal", href: "/federal" },
   { name: "About", href: "/about" },
   { name: "Careers", href: "/careers" },
   { name: "Contact", href: "/contact" },
@@ -75,8 +78,17 @@ export const WHY_AMERICSOFT = [
 ];
 
 export const INDUSTRIES = [
-  "Federal civilian & defense",
-  "Financial & risk-sensitive enterprises",
-  "Healthcare & life sciences",
+  "Defense & aviation",
+  "Federal financial systems",
+  "Public health & mission analytics",
   "Infrastructure, transportation & energy",
+];
+
+export const NAICS_CODES = [
+  { code: "541511", label: "Custom Computer Programming Services" },
+  { code: "541512", label: "Computer Systems Design Services" },
+  { code: "541513", label: "Computer Facilities Management Services" },
+  { code: "541519", label: "Other Computer Related Services" },
+  { code: "541330", label: "Engineering Services" },
+  { code: "541715", label: "Research and Development in Engineering" },
 ];

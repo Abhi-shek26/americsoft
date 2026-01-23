@@ -31,28 +31,29 @@ const openRoles = [
 ];
 
 const benefits = [
-  "Work on mission-critical federal projects",
-  "Architect-led teams with technical leadership opportunities",
-  "Competitive compensation and benefits",
+  "Mission-critical federal programs (defense, aviation, financial, public health)",
+  "Technical leadership opportunities on complex systems",
+  "Competitive compensation and comprehensive benefits",
   "Remote-friendly work environment",
-  "Continuous learning and development",
-  "Security clearance sponsorship available",
+  "Professional development and continuous learning",
+  "Security clearance sponsorship opportunities available",
 ];
 
 const Careers = () => {
   return (
     <Layout>
       <Hero
-        headline="Careers at AmericSoft"
-        subhead="Join a team that delivers engineering excellence in high-trust environments."
+        headline="Careers at AmericSoft Federal"
+        subhead="Join a team delivering federal IT solutions across defense, aviation, financial, and public health missions."
         variant="simple"
+        backgroundImageUrl="/generated_images/Career.png"
       />
 
       <Section>
         <div className="max-w-4xl mx-auto">
           <FadeInView>
             <p className="text-xl text-muted-foreground leading-relaxed mb-12">
-              We're always looking for strong engineers and architects who can deliver in high-trust environments—AI engineering, data engineering, DevSecOps, and cloud security. If you're passionate about building systems that matter, we'd love to hear from you.
+              We seek talented engineers and architects with experience in federal IT environments. Our teams deliver across AI engineering, data platforms, DevSecOps, cloud modernization, and defense/aviation systems. If you're ready to support mission-critical federal programs, we'd love to hear from you.
             </p>
           </FadeInView>
 

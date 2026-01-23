@@ -27,7 +27,7 @@ const Section = ({
   };
 
   return (
-    <section className={`py-20 lg:py-28 ${bgClasses[variant]} ${className}`}>
+    <section className={`py-6 lg:py-12 ${bgClasses[variant]} ${className}`}>
       {/* Optional AI background for dark/gradient variants */}
       {(variant === "dark" || variant === "gradient") && (
         <BackgroundImage
@@ -59,7 +59,7 @@ const Section = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className={`mb-14 lg:mb-20 ${centered ? "text-center" : ""}`}
+            className={`mb-10 lg:mb-15 ${centered ? "text-center" : ""}`}
           >
             {title && (
               <h2 className={`text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 font-display ${variant === "dark" ? "text-white" : "text-gradient"}`}>

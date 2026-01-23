@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@/hooks/useTheme";
 import Index from "./pages/Index";
+import CapabilityStatement from "./pages/CapabilityStatement";
 import Services from "./pages/Services";
 import Federal from "./pages/Federal";
 import About from "./pages/About";
@@ -23,6 +24,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/capability-statement" element={<CapabilityStatement />} />
             <Route path="/services" element={<Services />} />
             <Route path="/federal" element={<Federal />} />
             <Route path="/about" element={<About />} />

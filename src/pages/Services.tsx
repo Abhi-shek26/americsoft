@@ -6,6 +6,7 @@ import Section from "@/components/shared/Section";
 import CTABand from "@/components/shared/CTABand";
 import FadeInView from "@/components/shared/FadeInView";
 import BackgroundImage from "@/components/shared/BackgroundImage";
+import { SITE } from "@/content/site";
 
 const services = [
   {
@@ -75,13 +76,14 @@ const Services = () => {
     <Layout>
       <Hero
         headline="Services"
-        subhead="Federal-grade AI and platform engineering that moves from strategy → build → production."
+        subhead="Federal IT solutions delivery—from defense systems to aviation safety, financial platforms, and public health analytics."
         variant="simple"
+        backgroundImageUrl="/generated_images/faa_radar_safety_visual.png"
       />
 
       <Section>
         <p className="text-lg text-muted-foreground max-w-3xl mb-16">
-          AmericSoft delivers federal-grade AI and platform engineering services that move from strategy → build → production operations. Our services are designed for organizations that require compliance, security, and mission reliability.
+          {SITE.name} provides comprehensive federal IT products and services across artificial intelligence, data engineering, cloud modernization, and secure platform operations. We deliver solutions designed for government agencies and regulated enterprises where compliance, security, and mission-critical reliability are essential.
         </p>
 
         <div className="space-y-8">
@@ -90,7 +92,7 @@ const Services = () => {
               <motion.div
                 whileHover={{ scale: 1.01 }}
                 transition={{ duration: 0.2 }}
-                className="relative rounded-2xl border border-border p-6 lg:p-8 hover:border-accent/30 hover:shadow-lg transition-all duration-300 overflow-hidden"
+                className="relative rounded-2xl border border-border hover:border-accent/30 hover:shadow-lg transition-all duration-300 overflow-hidden h-96"
               >
                 {/* Background images */}
                 {index === 0 && (
@@ -130,7 +132,7 @@ const Services = () => {
                 )}
 
                 {/* Content container */}
-                <div className="relative z-10 p-6 lg:p-8">
+                <div className="relative z-10 p-6 lg:p-8 h-full flex flex-col justify-center">
                   <div className="flex flex-col lg:flex-row lg:items-start gap-6">
                     <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
                       <service.icon className="h-7 w-7 text-accent" />

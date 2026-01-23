@@ -14,20 +14,20 @@ const highlights = [
 
 const values = [
   {
-    title: "Engineering-First Delivery",
-    description: "We lead with technical depth, not slide decks. Our architects and engineers solve real problems.",
+    title: "Solutions Delivery Focus",
+    description: "We design, implement, and operate federal IT systems. Our teams deliver production solutions, not just consulting recommendations.",
   },
   {
-    title: "Security & Governance by Design",
-    description: "Compliance isn't an afterthought—it's built into every architecture decision from day one.",
+    title: "Security & Compliance by Design",
+    description: "Compliance isn't an afterthought—it's built into every architecture decision from day one, aligned with federal requirements.",
   },
   {
-    title: "Practical Outcomes",
-    description: "We measure success by production deployments and mission impact, not theoretical frameworks.",
+    title: "Mission-Critical Experience",
+    description: "Proven delivery across defense (F-35 PHM), aviation safety (FAA), federal financial systems, and public health programs.",
   },
   {
     title: "Long-Term Partnership",
-    description: "We build relationships that evolve with your mission, providing sustained engineering partnership.",
+    description: "We build relationships that evolve with your mission, providing sustained engineering partnership and technical expertise.",
   },
 ];
 
@@ -36,8 +36,9 @@ const About = () => {
     <Layout>
       <Hero
         headline="About AmericSoft"
-        subhead="Decades of experience. Mission-critical focus. Engineering-first delivery."
+        subhead="Over two decades delivering federal IT solutions — defense, aviation, financial, and public health."
         variant="simple"
+        backgroundImageUrl="/generated_images/About.png"
       />
 
       {/* About Narrative */}
@@ -46,13 +47,13 @@ const About = () => {
           <div className="lg:col-span-3">
             <FadeInView>
               <p className="text-xl text-muted-foreground leading-relaxed mb-6">
-                Founded in {SITE.foundedYear}, {SITE.name} has supported complex enterprise data and mission-critical technology initiatives for over two decades.
+                Founded in {SITE.foundedYear}, {SITE.name} is a U.S.-based Federal IT products and services company with extensive experience supporting government agencies and regulated enterprises.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Our work has evolved into secure, AI-enabled modernization—building governed agentic systems and resilient platforms for federal and regulated environments. We combine deep technical expertise with an understanding of the unique requirements that come with mission-critical operations.
+                We operate across defense, aviation, federal financial systems, and public health—delivering mission-critical technology including data engineering, cloud modernization, and AI-enabled platforms. Our approach combines technical depth with a practical understanding of federal compliance and operational requirements.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Today, we partner with federal agencies and regulated enterprises to design, build, and operate AI systems that are production-ready, auditable, and aligned with compliance requirements from the start.
+                Today, artificial intelligence and agentic systems represent a strategic product line within our broader federal technology portfolio, complementing our proven capabilities in secure data platforms and regulated cloud environments.
               </p>
             </FadeInView>
           </div>
@@ -105,7 +106,7 @@ const About = () => {
               Our Mission
             </h2>
             <p className="text-lg lg:text-xl text-primary-foreground/80 leading-relaxed">
-              To deliver production-grade AI and data platforms that federal agencies and regulated enterprises can trust—built with the engineering rigor, security focus, and governance controls that mission-critical operations demand.
+              To deliver trusted federal IT solutions—from defense-grade data platforms to AI-enabled systems—built with the engineering rigor, security controls, and compliance frameworks that mission-critical government operations require.
             </p>
           </div>
         </FadeInView>

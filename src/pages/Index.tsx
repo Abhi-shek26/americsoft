@@ -25,12 +25,13 @@ const Index = () => {
     <Layout>
       {/* Hero Section */}
       <Hero
-        headline="Federal AI & Agentic Systems Engineering"
-        subhead="Secure • Governed • Mission-Ready AI for Federal & Regulated Environments"
-        body={`${SITE.name} is a U.S.-based technology firm delivering AI-driven, agentic platforms and federal IT modernization services. Founded in ${SITE.foundedYear}, we bring decades of experience in enterprise data platforms, cloud modernization, and mission-critical systems—now evolved into production-grade AI and agentic architectures designed for compliance, auditability, and scale.`}
-        primaryCta={{ text: "Talk to an Architect", href: "/contact" }}
-        secondaryCta={{ text: "Federal Capabilities", href: "/federal" }}
+        headline="AmericSoft Federal"
+        subhead="Federal IT Products & Services | Defense • Aviation • Financial • Public Health"
+        body={`U.S.-based federal IT company delivering mission-critical solutions to government agencies and regulated enterprises. Since ${SITE.foundedYear}, we've built defense-grade systems, aviation safety platforms, federal financial solutions, and public health analytics—combining secure technology delivery with deep federal program experience.`}
+        primaryCta={{ text: "View Capabilities", href: "/capability-statement" }}
+        secondaryCta={{ text: "Contact Us", href: "/contact" }}
         showIllustration
+        backgroundImageUrl="/generated_images/defense_f35_phm_visual.png"
       />
 
       {/* Stats Section */}
@@ -50,15 +51,15 @@ const Index = () => {
 
       {/* 4 Pillars Section */}
       <Section
-        title="Our Core Capabilities"
-        subtitle="Comprehensive AI and platform engineering services designed for federal and regulated environments."
+        title="Federal IT Delivery Across Mission Domains"
+        subtitle="Comprehensive solutions for defense, aviation, federal financial systems, and public health agencies."
         centered
       >
         <CardGrid items={PILLARS} columns={4} />
       </Section>
 
       {/* Federal-Ready AI Section */}
-      <Section variant="muted" title="What Makes Our AI Federal-Ready">
+      <Section variant="muted" title="Federal-Ready Technology & Compliance">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <FadeInView>
             <div className="space-y-3 sm:space-y-4">
@@ -81,13 +82,13 @@ const Index = () => {
           </FadeInView>
 
           <FadeInView delay={0.2} direction="right">
-            <div className="relative rounded-2xl p-6 sm:p-8 lg:p-10 overflow-hidden">
+            <div className="relative rounded-2xl overflow-hidden h-96">
               <BackgroundImage
-                imageUrl="/generated_images/federal_capabilities_section_background.png"
+                imageUrl="/generated_images/federal_financial_systems_visual.png"
                 overlay="dark"
                 overlayOpacity={50}
               />
-              <div className="relative z-10">
+              <div className="relative z-10 p-8 h-full flex flex-col justify-center">
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 font-display">
                   Why AmericSoft
                 </h3>
@@ -139,10 +140,10 @@ const Index = () => {
 
       {/* Final CTA */}
       <CTABand
-        title="Build trusted AI for real missions."
-        description="Partner with architects who understand federal-grade requirements."
-        buttonText="Contact AmericSoft"
-        buttonHref="/contact"
+        title="Deliver mission-critical federal IT solutions"
+        description="Partner with a proven federal technology delivery organization."
+        buttonText="View Capability Statement"
+        buttonHref="/capability-statement"
       />
     </Layout>
   );

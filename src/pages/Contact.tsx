@@ -10,9 +10,10 @@ const Contact = () => {
   return (
     <Layout>
       <Hero
-        headline="Talk to an Architect"
-        subhead="Let's discuss how we can support your mission-critical initiatives."
+        headline="Contact AmericSoft Federal"
+        subhead="Let's discuss how we can support your federal IT and mission-critical requirements."
         variant="simple"
+        backgroundImageUrl="/generated_images/Contact.png"
       />
 
       <Section>
@@ -48,11 +49,14 @@ const Contact = () => {
                     </div>
                     <span>{SITE.phone}</span>
                   </a>
-                  <div className="flex items-center gap-3 text-muted-foreground">
+                  <div className="flex items-start gap-3 text-muted-foreground">
                     <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center shrink-0">
                       <MapPin className="h-5 w-5 text-accent" />
                     </div>
-                    <span>United States</span>
+                    <div>
+                      <span className="block">{SITE.address}</span>
+                      <span className="block">{SITE.location}</span>
+                    </div>
                   </div>
                 </div>
               </div>

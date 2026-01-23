@@ -16,6 +16,7 @@ interface HeroProps {
   children?: ReactNode;
   variant?: "default" | "simple";
   showIllustration?: boolean;
+  backgroundImageUrl?: string;
 }
 
 const Hero = ({
@@ -27,12 +28,13 @@ const Hero = ({
   children,
   variant = "default",
   showIllustration = false,
+  backgroundImageUrl = "/generated_images/federal_ai_network_visualization.png",
 }: HeroProps) => {
   return (
-    <section className="relative overflow-hidden bg-hero">
+    <section className="relative overflow-hidden bg-hero min-h-screen flex items-center">
       {/* AI background image (bottom layer) */}
       <BackgroundImage
-        imageUrl="/generated_images/federal_ai_network_visualization.png"
+        imageUrl={backgroundImageUrl}
         overlay="dark"
         overlayOpacity={45}
       />
@@ -40,7 +42,7 @@ const Hero = ({
       {/* Animated Background (tech mesh, orbs, etc.) */}
       <AnimatedBackground variant="hero" />
 
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10 w-full">
         <div className={`${variant === "simple" ? "py-20 lg:py-28" : "py-16 sm:py-20 lg:py-32"}`}>
           <div className={`grid ${showIllustration ? "lg:grid-cols-2 gap-8 lg:gap-12 items-center" : ""}`}>
             <motion.div

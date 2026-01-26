@@ -3,22 +3,53 @@ import { motion } from "framer-motion";
 const HeroIllustration = () => {
   return (
     <div className="relative w-full h-[400px] lg:h-[500px]">
-      {/* Central core */}
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 md:w-40 md:h-40"
-        animate={{ rotate: 360 }}
-        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-      >
-        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan to-electric opacity-30 blur-xl" />
-        <div className="absolute inset-4 rounded-full bg-gradient-to-br from-cyan to-cyan-light shadow-neon" />
-        <div className="absolute inset-8 rounded-full bg-navy-light flex items-center justify-center">
+      {/* Central core with enhanced circular pattern */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        {/* Outer glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 md:w-56 md:h-56 rounded-full bg-gradient-to-br from-cyan to-electric opacity-20 blur-3xl" />
+        
+        {/* Rotating outer ring */}
+        <motion.div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-36 h-36 md:w-44 md:h-44 rounded-full border-2 border-cyan/40"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+        />
+        
+        {/* Middle ring */}
+        <motion.div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 md:w-36 md:h-36 rounded-full"
+          style={{
+            background: "conic-gradient(from 0deg, transparent 0%, hsl(175 85% 42% / 0.3) 50%, transparent 100%)",
+          }}
+          animate={{ rotate: -360 }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        />
+        
+        {/* Inner ring with gradient */}
+        <motion.div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-cyan to-cyan-light shadow-neon"
+          animate={{ 
+            boxShadow: [
+              "0 0 20px hsl(175 85% 42% / 0.5)",
+              "0 0 40px hsl(175 85% 42% / 0.8)",
+              "0 0 20px hsl(175 85% 42% / 0.5)",
+            ]
+          }}
+          transition={{ duration: 3, repeat: Infinity }}
+        />
+        
+        {/* Center core */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary border-2 border-cyan/50 flex items-center justify-center">
           <motion.div
-            className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-gradient-to-br from-cyan to-neon"
-            animate={{ scale: [1, 1.2, 1] }}
+            className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-gradient-to-br from-cyan to-neon shadow-glow"
+            animate={{ 
+              scale: [1, 1.3, 1],
+              opacity: [0.8, 1, 0.8],
+            }}
             transition={{ duration: 2, repeat: Infinity }}
           />
         </div>
-      </motion.div>
+      </div>
 
       {/* Orbiting elements */}
       {[0, 1, 2, 3].map((i) => (
@@ -55,27 +86,6 @@ const HeroIllustration = () => {
             }}
           />
         </motion.div>
-      ))}
-
-      {/* Outer rings */}
-      {[1, 2, 3].map((i) => (
-        <motion.div
-          key={`ring-${i}`}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan/20"
-          style={{
-            width: 150 + i * 80,
-            height: 150 + i * 80,
-          }}
-          animate={{
-            scale: [1, 1.05, 1],
-            opacity: [0.3, 0.6, 0.3],
-          }}
-          transition={{
-            duration: 4 + i,
-            repeat: Infinity,
-            delay: i * 0.5,
-          }}
-        />
       ))}
 
       {/* Data flow lines */}

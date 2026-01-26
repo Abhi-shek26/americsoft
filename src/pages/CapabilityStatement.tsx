@@ -1,7 +1,5 @@
 import {
-  Building2,
   Shield,
-  Calendar,
   MapPin,
   Mail,
   Phone,
@@ -13,98 +11,80 @@ import Layout from "@/components/layout/Layout";
 import Hero from "@/components/shared/Hero";
 import Section from "@/components/shared/Section";
 import FadeInView from "@/components/shared/FadeInView";
-import { SITE, NAICS_CODES } from "@/content/site";
+import { SITE } from "@/content/site";
 
 const coreCapabilities = [
   {
-    title: "Defense Technology & Aviation Systems",
+    title: "Federal IT Products & Platforms",
     items: [
-      "F-35 PHM Data Management & Analytics",
-      "Aircraft health monitoring platforms",
-      "Defense-grade secure data systems",
-      "Maintenance intelligence & operational readiness",
+      "Production-grade federal IT systems",
+      "Secure and compliant platform delivery",
+      "Long-term operations & sustainment",
     ],
   },
   {
-    title: "FAA Aviation Technology",
+    title: "AI Agentic Solutions (Governed & Controlled)",
     items: [
-      "Aviation safety systems",
-      "Radar data processing platforms",
-      "Airspace analytics & monitoring",
-      "Real-time aviation data management",
+      "Policy-aware agentic architectures",
+      "Controlled multi-agent workflows",
+      "Mission-aligned AI decision systems",
     ],
   },
   {
-    title: "Federal Financial Systems",
+    title: "Defense & Aviation Data Systems",
     items: [
-      "Enterprise data & analytics platforms",
-      "Financial system modernization",
-      "Secure transaction processing",
-      "Compliance & audit-ready systems",
+      "F-35 PHM data management",
+      "Aviation safety & radar data platforms",
+      "Operational readiness analytics",
     ],
   },
   {
-    title: "Federal Public Health & Mission Analytics",
+    title: "Cloud & Platform Modernization",
     items: [
-      "Population-level analytics platforms",
-      "Mission decision support systems",
-      "Secure health data engineering",
-      "Reporting & visualization solutions",
+      "Government cloud migrations",
+      "Secure cloud-native architectures",
+      "Legacy system modernization",
     ],
   },
   {
-    title: "Cloud & Data Engineering",
+    title: "Mission-Critical Data Engineering",
     items: [
-      "AWS GovCloud & Azure Government",
-      "Secure data pipelines & ETL",
-      "Cloud migration & modernization",
-      "Data lake & warehouse architecture",
+      "High-reliability data pipelines",
+      "Analytics foundations",
+      "Regulatory-compliant data platforms",
     ],
   },
   {
-    title: "Artificial Intelligence & Agentic Systems",
+    title: "Integrated Federal Solutions Delivery",
     items: [
-      "AI-enabled decision support platforms",
-      "Governed agentic architectures",
-      "Multi-LLM orchestration frameworks",
-      "Policy-aware AI systems",
+      "End-to-end program delivery",
+      "Prime & subcontractor engagement",
+      "Compliance-aligned execution",
     ],
-  },
+  }
 ];
 
 const differentiators = [
-  "20+ years supporting federal and regulated missions",
-  "Proven experience with defense-grade systems (F-35 PHM)",
-  "FAA aviation safety program expertise",
-  "Architect-led delivery teams with federal experience",
-  "Security & compliance built into every solution",
-  "Prime and subcontractor engagement experience",
+  "Federal IT products built for production, not prototypes",
+  "Proven defense aviation experience (F-35 PHM)",
+  "FAA enterprise data platform delivery",
+  "Governed and controlled AI agentic systems",
+  "Secure-by-design architectures for regulated environments",
+  "Prime and subcontractor federal engagement experience",
 ];
 
 const pastPerformance = [
   {
     domain: "Defense Aviation",
-    program: "F-35 Prognostics & Health Management",
+    program: "F-35 Program – PHM Data Management",
     description:
-      "Defense-grade data engineering and analytics supporting aircraft health monitoring, maintenance intelligence, and operational readiness.",
+      "Supported defense aviation programs including the F-35, delivering PHM data management, government cloud migration, and analytics foundations enabling aircraft health monitoring and operational readiness.",
   },
   {
-    domain: "Aviation Safety",
-    program: "FAA Aviation Technology Programs",
+    domain: "Federal Aviation Administration",
+    program: "FAA Enterprise Information Management (EIM)",
     description:
-      "High-reliability platforms for aviation safety, radar data processing, and airspace analytics under strict regulatory requirements.",
-  },
-  {
-    domain: "Federal Financial",
-    program: "Federal Financial Systems",
-    description:
-      "Enterprise-grade data and analytics platforms for federal financial operations requiring accuracy, traceability, and resilience.",
-  },
-  {
-    domain: "Public Health",
-    program: "Federal Public Health Programs",
-    description:
-      "Secure data platforms enabling population-level analytics, reporting, and mission decision support for federal health agencies.",
+      "Supports the FAA EIM program as a subcontractor to GDIT, delivering enterprise aviation data platform management and analytics foundations that enable reliable information sharing and mission-critical decision support.",
   },
 ];
 
@@ -112,8 +92,8 @@ const CapabilityStatement = () => {
   return (
     <Layout>
       <Hero
-        headline="Capability Statement"
-        subhead="Federal IT Products & Services Delivering Mission-Critical Solutions"
+        headline="AmericSoft Federal"
+        subhead="Federal IT Products & AI Agentic Solutions"
         variant="simple"
         backgroundImageUrl="/generated_images/capability.png"
       />
@@ -125,25 +105,27 @@ const CapabilityStatement = () => {
             <FadeInView>
               <div className="space-y-3 text-lg text-muted-foreground">
                 <p>
-                  <strong className="text-foreground">{SITE.name}</strong> is a
-                  U.S. based Federal IT products and services company delivering
-                  mission critical technology solutions to government agencies
-                  and regulated enterprises.
-                </p>
-                <p>
-                  Founded in {SITE.foundedYear}, we operate across defense,
-                  aviation, data, cloud, and artificial intelligence
-                  domains supporting high-trust federal missions with scalable,
-                  secure systems.
-                </p>
-                <p>
-                  Our delivery is built around {" "}
                   <strong className="text-foreground">
-                    solutions engineering
-                  </strong>
-                  {" "} we design, implement, and operate federal IT systems while
-                  providing expert consulting and highly skilled technical
-                  consultants.
+                    AmericSoft Solutions Inc.
+                  </strong>{" "}
+                  is a U.S.-based Federal IT products and services company
+                  delivering secure, scalable, and production-ready technology
+                  solutions to government agencies and regulated enterprises.
+                </p>
+                <p>
+                  Founded in 2012, AmericSoft specializes in solutions delivery
+                  across defense aviation, FAA systems, data engineering, cloud
+                  modernization, and AI-enabled platforms operating in
+                  high-trust federal environments.
+                </p>
+                <p>
+                  Our work centers on {" "}
+                  <strong className="text-foreground">
+                    mission-critical solutions delivery
+                  </strong>{" "}
+                  —building, modernizing, and operating federal IT products,
+                  governed AI agentic systems, and secure data platforms that
+                  meet strict regulatory and operational requirements.
                 </p>
               </div>
             </FadeInView>
@@ -187,17 +169,17 @@ const CapabilityStatement = () => {
         </div>
       </Section>
 
-      {/* Core Capabilities */}
+      {/* Core Focus Areas */}
       <Section
         variant="muted"
-        title="Core Capabilities"
-        subtitle="Comprehensive federal IT delivery across mission-critical domains"
+        title="Core Focus Areas"
+        subtitle="Federal IT products, platforms, and governed AI systems"
         className="py-2"
       >
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 auto-rows-fr">
           {coreCapabilities.map((capability, index) => (
             <FadeInView key={index} delay={index * 0.04}>
-              <div className="bg-card rounded-xl border border-border p-4 h-full">
+              <div className="bg-card rounded-xl border border-border p-4 h-full lg:col-span-2">
                 <h3 className="text-lg font-bold text-foreground mb-3">
                   {capability.title}
                 </h3>
@@ -221,7 +203,7 @@ const CapabilityStatement = () => {
       {/* Past Performance */}
       <Section
         title="Past Performance & Experience"
-        subtitle="Proven delivery across defense, aviation, financial, and public health missions"
+        subtitle="Proven delivery across defense aviation and FAA missions"
         className="py-2"
       >
         <div className="grid md:grid-cols-2 gap-3">
@@ -265,73 +247,45 @@ const CapabilityStatement = () => {
         </div>
       </Section>
 
-      {/* Contract Vehicles */}
-      <Section title="Federal Contract Vehicles & Compliance" centered className="py-2">
+      {/* Federal Engagement Model */}
+      <Section title="Federal Engagement Model" centered className="py-2">
         <FadeInView>
           <div className="bg-card rounded-xl border border-border p-6 max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-3">
               <FileText className="h-6 w-6 text-accent" />
               <h3 className="text-xl font-bold text-foreground">
-                Contract Vehicles
+                Engagement Approach
               </h3>
             </div>
             <p className="text-muted-foreground mb-4">
-              {SITE.name} supports federal prime and subcontractor engagements,
-              including FAA contract vehicles focused on aviation safety and
-              airspace systems. Our delivery aligns with federal acquisition
-              regulations and agency-specific compliance requirements.
+              AmericSoft delivers federal IT solutions through prime contractor
+              partnerships and subcontractor engagements, embedding experienced
+              delivery teams into mission-critical programs across defense and
+              civilian agencies.
             </p>
             <div className="border-t border-border pt-4">
               <p className="text-sm text-muted-foreground">
                 <strong className="text-foreground">
-                  Acquisition Support:
+                  Engagement Model:
                 </strong>{" "}
-                FAR-compliant delivery, DFARS awareness, and agency-specific
-                compliance frameworks.
+                Prime and subcontractor delivery, federal program integration,
+                and compliance-aligned execution.
               </p>
             </div>
           </div>
         </FadeInView>
       </Section>
 
-      {/* NAICS Codes */}
-      <Section
-        variant="muted"
-        title="NAICS Codes"
-        centered
-        className="py-2"
-      >
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 max-w-5xl mx-auto">
-          {NAICS_CODES.map((naics, index) => (
-            <FadeInView key={index} delay={index * 0.03}>
-              <div className="bg-card rounded-xl border border-border p-4">
-                <div className="flex items-center gap-3 mb-1">
-                  <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">
-                    <Building2 className="h-4 w-4 text-accent" />
-                  </div>
-                  <span className="font-bold text-foreground">
-                    {naics.code}
-                  </span>
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  {naics.label}
-                </p>
-              </div>
-            </FadeInView>
-          ))}
-        </div>
-      </Section>
-
       {/* Contact CTA */}
-      <Section title="Engage AmericSoft Federal" centered >
+      <Section title="Engage AmericSoft Federal" centered>
         <FadeInView>
           <div className="bg-hero rounded-2xl p-4 max-w-3xl mx-auto text-center mb-5">
             <h3 className="text-2xl font-bold text-primary-foreground mb-4">
-              Partner with a Proven Federal IT Delivery Organization
+              Mission-Critical Federal IT. Delivered.
             </h3>
             <p className="text-lg text-primary-foreground/80 mb-5">
-              For federal agencies, primes, and partners seeking mission-critical
-              technology solutions.
+              Partner with a proven federal IT delivery organization supporting
+              defense, aviation, and regulated federal missions.
             </p>
             <div className="space-y-2">
               <div className="flex items-center justify-center gap-2 text-primary-foreground">

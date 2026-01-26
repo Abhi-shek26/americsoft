@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Mail, Phone, Linkedin, Twitter, ArrowUpRight, Zap } from "lucide-react";
+import { Mail, Phone, Linkedin, Twitter, ArrowUpRight } from "lucide-react";
 import { SITE, NAV_LINKS } from "@/content/site";
 
 const Footer = () => {
@@ -23,12 +23,12 @@ const Footer = () => {
             {/* Brand Column */}
             <div className="lg:col-span-5">
               <Link to="/" className="inline-flex items-center gap-3 group mb-6">
-                <motion.div 
-                  className="w-12 h-12 bg-gradient-to-br from-cyan to-cyan-light rounded-xl flex items-center justify-center shadow-neon group-hover:shadow-glow-lg transition-all duration-300"
+                <motion.img
+                  src={SITE.logoUrl}
+                  alt={SITE.logoAlt}
+                  className="w-16 h-16 rounded-xl object-contain bg-white shadow-neon group-hover:shadow-glow-lg transition-all duration-300"
                   whileHover={{ scale: 1.05, rotate: 5 }}
-                >
-                  <Zap className="h-6 w-6 text-white" />
-                </motion.div>
+                />
                 <span className="font-bold text-2xl text-primary-foreground font-display">
                   {SITE.name}
                 </span>

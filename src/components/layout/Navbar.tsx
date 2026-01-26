@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/content/site";
 import { Button } from "@/components/ui/button";
 import ThemeToggle from "@/components/shared/ThemeToggle";
@@ -34,12 +34,12 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 sm:gap-3 group">
-            <motion.div 
-              className="w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-br from-cyan to-cyan-light rounded-xl flex items-center justify-center shadow-neon group-hover:shadow-glow-lg transition-all duration-300"
+            <motion.img
+              src={SITE.logoUrl}
+              alt={SITE.logoAlt}
+              className="w-16 h-16 sm:w-16 sm:h-16 rounded-xl object-contain bg-white shadow-neon group-hover:shadow-glow-lg transition-all duration-300"
               whileHover={{ scale: 1.05, rotate: 5 }}
-            >
-              <Zap className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
-            </motion.div>
+            />
             <span className="font-bold text-base sm:text-lg lg:text-xl text-foreground font-display">
               {SITE.name}
             </span>

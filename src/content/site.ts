@@ -2,7 +2,9 @@
 export const SITE = {
   name: "AmericSoft Solutions",
   tagline: "AmericSoft Federal — IT Products & Services",
-  foundedYear: 2002,
+  logoUrl: "/americsoft-logo.png",
+  logoAlt: "AmericSoft logo",
+  foundedYear: 2012,
   email: "human.resources@americsoft.com",
   phone: "(770) 858-5756",
   description: "Federal IT Products & Services | Defense • Aviation • Financial • Public Health",
@@ -51,7 +53,7 @@ export const PILLARS = [
     icon: "layers",
   },
   {
-    title: "Federal Data Foundations for AI",
+    title: "Federal Data Foundations & Enterprise Data Management",
     description: "Secure pipelines for structured + unstructured data, lineage, provenance, semantic layers, and near-real-time analytics.",
     icon: "database",
   },
@@ -71,7 +73,7 @@ export const FEDERAL_READY = [
 ];
 
 export const WHY_AMERICSOFT = [
-  "Founded 2002 — proven delivery in complex environments",
+  "Founded 2012 — proven delivery in complex environments",
   "Architect-led delivery (engineering-first, not slideware)",
   "AI systems designed for production governance and scale",
   "Experience with mission-critical and regulated platforms",
@@ -81,7 +83,7 @@ export const INDUSTRIES = [
   "Defense & aviation",
   "Federal financial systems",
   "Public health & mission analytics",
-  "Infrastructure, transportation & energy",
+  "Infrastructure & transportation",
 ];
 
 export const NAICS_CODES = [

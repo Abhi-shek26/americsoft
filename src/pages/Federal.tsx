@@ -181,24 +181,6 @@ const Federal = () => {
         </div>
       </Section>
 
-      {/* NAICS Codes */}
-      <Section title="Relevant NAICS Codes" centered>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
-          {NAICS_CODES.map((n, i) => (
-            <FadeInView key={i} delay={i * 0.05}>
-              <div className="rounded-xl border border-border bg-card p-4">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">
-                    <Building className="h-4 w-4 text-accent" />
-                  </div>
-                  <span className="font-semibold text-foreground">{n.code}</span>
-                </div>
-                <p className="text-muted-foreground">{n.label}</p>
-              </div>
-            </FadeInView>
-          ))}
-        </div>
-      </Section>
 
       {/* PPTR Table */}
       <Section

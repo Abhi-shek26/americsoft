@@ -1,4 +1,4 @@
-import { Bot, Layers, Database, Cloud, Shield, ArrowRight } from "lucide-react";
+import { Bot, Building2, Layers, Database, Cloud, Shield, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import Hero from "@/components/shared/Hero";
@@ -6,7 +6,7 @@ import Section from "@/components/shared/Section";
 import CTABand from "@/components/shared/CTABand";
 import FadeInView from "@/components/shared/FadeInView";
 import BackgroundImage from "@/components/shared/BackgroundImage";
-import { SITE } from "@/content/site";
+import { SITE, NAICS_CODES } from "@/content/site";
 
 const services = [
   {
@@ -68,7 +68,7 @@ const engagementModels = [
   "Architecture & technical strategy",
   "Pilot → production enablement",
   "Platform modernization",
-  "Long-term engineering partnership",
+  "Long-term partnership",
 ];
 
 const Services = () => {
@@ -160,6 +160,33 @@ const Services = () => {
           ))}
         </div>
       </Section>
+{/* NAICS Codes */}
+      <Section
+        variant="muted"
+        title="NAICS Codes"
+        centered
+        className="py-2"
+      >
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 max-w-5xl mx-auto">
+          {NAICS_CODES.map((naics, index) => (
+            <FadeInView key={index} delay={index * 0.03}>
+              <div className="bg-card rounded-xl border border-border p-4">
+                <div className="flex items-center gap-3 mb-1">
+                  <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">
+                    <Building2 className="h-4 w-4 text-accent" />
+                  </div>
+                  <span className="font-bold text-foreground">
+                    {naics.code}
+                  </span>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  {naics.label}
+                </p>
+              </div>
+            </FadeInView>
+          ))}
+        </div>
+      </Section>
 
       <Section variant="muted" title="Engagement Models" centered>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
@@ -175,7 +202,6 @@ const Services = () => {
           ))}
         </div>
       </Section>
-
       <CTABand
         title="Ready to modernize your systems?"
         description="Let's discuss your requirements and build a roadmap."

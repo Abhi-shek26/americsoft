@@ -14,9 +14,9 @@ import { PILLARS, FEDERAL_READY, WHY_AMERICSOFT, INDUSTRIES, SITE } from "@/cont
 const industryIcons = [Building2, Briefcase, HeartPulse, Truck];
 
 const stats = [
-  { end: 22, suffix: "+", label: "Years of Excellence", icon: <Calendar className="h-7 w-7 text-cyan" /> },
+  { end: 15, suffix: "+", label: "Years of Excellence", icon: <Calendar className="h-7 w-7 text-cyan" /> },
   { end: 150, suffix: "+", label: "Projects Delivered", icon: <Award className="h-7 w-7 text-cyan" /> },
-  { end: 50, suffix: "+", label: "Federal Clients", icon: <Shield className="h-7 w-7 text-cyan" /> },
+  { end: 5, suffix: "+", label: "Federal Clients", icon: <Shield className="h-7 w-7 text-cyan" /> },
   { end: 100, suffix: "%", label: "Client Satisfaction", icon: <Users className="h-7 w-7 text-cyan" /> },
 ];
 
@@ -51,7 +51,7 @@ const Index = () => {
 
       {/* 4 Pillars Section */}
       <Section
-        title="Federal IT Delivery Across Mission Domains"
+        title="Federal IT Delivery Across Mission Critical Domains"
         subtitle="Comprehensive solutions for defense, aviation, federal financial systems, and public health agencies."
         centered
       >

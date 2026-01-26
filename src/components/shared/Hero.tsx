@@ -51,16 +51,7 @@ const Hero = ({
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               className="max-w-4xl"
             >
-              {/* Badge */}
-              <motion.div 
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full glass-dark text-cyan-glow text-xs sm:text-sm font-medium mb-4 sm:mb-6 pulse-glow"
-              >
-                <Sparkles className="w-3 h-3 sm:w-4 sm:h-4" />
-                Federal-Ready AI Solutions
-              </motion.div>
+              
 
               {/* Headline */}
               <motion.h1 

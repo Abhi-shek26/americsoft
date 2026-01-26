@@ -7,7 +7,7 @@ import FadeInView from "@/components/shared/FadeInView";
 import { SITE } from "@/content/site";
 
 const highlights = [
-  { icon: Calendar, label: "Founded", value: "2002" },
+  { icon: Calendar, label: "Founded", value: "2012" },
   { icon: Shield, label: "Focus", value: "Federal & Regulated" },
   { icon: Users, label: "Approach", value: "Architect-Led Teams" },
 ];

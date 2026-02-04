@@ -11,8 +11,8 @@ interface HeroProps {
   headline: string;
   subhead: string;
   body?: string;
-  primaryCta?: { text: string; href: string };
-  secondaryCta?: { text: string; href: string };
+  primaryCta?: { text: string; href: string; external?: boolean };
+  secondaryCta?: { text: string; href: string; external?: boolean };
   children?: ReactNode;
   variant?: "default" | "simple";
   showIllustration?: boolean;
@@ -102,10 +102,17 @@ const Hero = ({
                       size="lg" 
                       className="w-full sm:w-auto bg-gradient-to-r from-cyan to-cyan-light hover:from-cyan-light hover:to-cyan text-white font-semibold px-6 sm:px-8 shadow-neon transition-all duration-300 hover:shadow-glow-lg"
                     >
-                      <Link to={primaryCta.href}>
-                        {primaryCta.text}
-                        <ArrowRight className="ml-2 h-5 w-5" />
-                      </Link>
+                      {primaryCta.external ? (
+                        <a href={primaryCta.href} target="_blank" rel="noreferrer">
+                          {primaryCta.text}
+                          <ArrowRight className="ml-2 h-5 w-5" />
+                        </a>
+                      ) : (
+                        <Link to={primaryCta.href}>
+                          {primaryCta.text}
+                          <ArrowRight className="ml-2 h-5 w-5" />
+                        </Link>
+                      )}
                     </Button>
                   )}
                   {secondaryCta && (
@@ -115,7 +122,13 @@ const Hero = ({
                       variant="outline" 
                       className="w-full sm:w-auto border-white/30 bg-white/5 text-white hover:bg-white/10 hover:border-cyan/50 font-medium backdrop-blur-sm transition-all duration-300"
                     >
-                      <Link to={secondaryCta.href}>{secondaryCta.text}</Link>
+                      {secondaryCta.external ? (
+                        <a href={secondaryCta.href} target="_blank" rel="noreferrer">
+                          {secondaryCta.text}
+                        </a>
+                      ) : (
+                        <Link to={secondaryCta.href}>{secondaryCta.text}</Link>
+                      )}
                     </Button>
                   )}
                 </motion.div>

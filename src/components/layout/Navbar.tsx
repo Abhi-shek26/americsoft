@@ -47,26 +47,35 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
-                  location.pathname === link.href
-                    ? "text-accent"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {link.name}
-                {location.pathname === link.href && (
-                  <motion.div
-                    layoutId="navbar-indicator"
-                    className="absolute inset-0 bg-accent/10 rounded-lg -z-10"
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                  />
-                )}
-              </Link>
-            ))}
+            {NAV_LINKS.map((link) => {
+              const isActive = !link.external && location.pathname === link.href;
+              const classes = `relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
+                isActive ? "text-accent" : "text-muted-foreground hover:text-foreground"
+              }`;
+
+              return link.external ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={classes}
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <Link key={link.href} to={link.href} className={classes}>
+                  {link.name}
+                  {isActive && (
+                    <motion.div
+                      layoutId="navbar-indicator"
+                      className="absolute inset-0 bg-accent/10 rounded-lg -z-10"
+                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                    />
+                  )}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Right side: Theme Toggle + CTA */}
@@ -105,26 +114,43 @@ const Navbar = () => {
               className="lg:hidden overflow-hidden glass-card rounded-2xl mb-4"
             >
               <div className="py-4 px-2 space-y-1">
-                {NAV_LINKS.map((link, index) => (
-                  <motion.div
-                    key={link.href}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05 }}
-                  >
-                    <Link
-                      to={link.href}
-                      onClick={() => setIsOpen(false)}
-                      className={`block px-4 py-3 rounded-lg transition-all duration-300 ${
-                        location.pathname === link.href
-                          ? "text-accent bg-accent/10"
-                          : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
-                      }`}
+                {NAV_LINKS.map((link, index) => {
+                  const isActive = !link.external && location.pathname === link.href;
+                  const linkClasses = `block px-4 py-3 rounded-lg transition-all duration-300 ${
+                    isActive
+                      ? "text-accent bg-accent/10"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                  }`;
+
+                  return (
+                    <motion.div
+                      key={link.href}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.05 }}
                     >
-                      {link.name}
-                    </Link>
-                  </motion.div>
-                ))}
+                      {link.external ? (
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          onClick={() => setIsOpen(false)}
+                          className={linkClasses}
+                        >
+                          {link.name}
+                        </a>
+                      ) : (
+                        <Link
+                          to={link.href}
+                          onClick={() => setIsOpen(false)}
+                          className={linkClasses}
+                        >
+                          {link.name}
+                        </Link>
+                      )}
+                    </motion.div>
+                  );
+                })}
                 <div className="pt-4 px-2">
                   <Button 
                     asChild 

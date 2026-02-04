@@ -14,7 +14,7 @@ export const SITE = {
 
 export const NAV_LINKS = [
   { name: "Home", href: "/" },
-  { name: "Capability Statement", href: "/capability-statement" },
+  { name: "Capability Statement", href: "/capability-statement.pdf", external: true },
   { name: "Services", href: "/services" },
   { name: "Federal", href: "/federal" },
   { name: "About", href: "/about" },

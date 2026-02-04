@@ -28,7 +28,7 @@ const Index = () => {
         headline="AmericSoft Federal"
         subhead="Federal IT & AI Agentic Solutions"
         body={`U.S.-based federal IT company delivering mission-critical solutions to government agencies and regulated enterprises. Since ${SITE.foundedYear}, we've built defense-grade systems, aviation safety platforms, federal financial solutions, and public health analytics—combining secure technology delivery with deep federal program experience.`}
-        primaryCta={{ text: "View Capabilities", href: "/capability-statement" }}
+        primaryCta={{ text: "View Capabilities", href: "/capability-statement.pdf", external: true }}
         secondaryCta={{ text: "Contact Us", href: "/contact" }}
         showIllustration
         backgroundImageUrl="/generated_images/defense_f35_phm_visual.png"
@@ -134,7 +134,8 @@ const Index = () => {
         title="Deliver mission-critical federal IT solutions"
         description="Partner with a proven federal technology delivery organization."
         buttonText="View Capability Statement"
-        buttonHref="/capability-statement"
+        buttonHref="/capability-statement.pdf"
+        buttonExternal
       />
     </Layout>
   );

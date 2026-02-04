@@ -9,6 +9,7 @@ interface CTABandProps {
   description?: string;
   buttonText: string;
   buttonHref: string;
+  buttonExternal?: boolean;
   variant?: "accent" | "dark";
 }
 
@@ -17,6 +18,7 @@ const CTABand = ({
   description,
   buttonText,
   buttonHref,
+  buttonExternal = false,
   variant = "accent",
 }: CTABandProps) => {
   const isAccent = variant === "accent";
@@ -77,10 +79,17 @@ const CTABand = ({
                 : "bg-gradient-to-r from-primary to-navy-light text-white"
             } font-semibold px-6 sm:px-8 shrink-0 transition-all duration-300`}
           >
-            <Link to={buttonHref}>
-              {buttonText}
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            {buttonExternal ? (
+              <a href={buttonHref} target="_blank" rel="noreferrer">
+                {buttonText}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+            ) : (
+              <Link to={buttonHref}>
+                {buttonText}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            )}
           </Button>
         </motion.div>
       </div>

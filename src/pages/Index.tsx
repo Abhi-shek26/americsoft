@@ -26,7 +26,7 @@ const Index = () => {
       {/* Hero Section */}
       <Hero
         headline="AmericSoft Federal"
-        subhead="Federal IT Products & Services | Defense • Aviation • Financial • Public Health"
+        subhead="Federal IT & AI Agentic Solutions"
         body={`U.S.-based federal IT company delivering mission-critical solutions to government agencies and regulated enterprises. Since ${SITE.foundedYear}, we've built defense-grade systems, aviation safety platforms, federal financial solutions, and public health analytics—combining secure technology delivery with deep federal program experience.`}
         primaryCta={{ text: "View Capabilities", href: "/capability-statement" }}
         secondaryCta={{ text: "Contact Us", href: "/contact" }}
@@ -127,15 +127,6 @@ const Index = () => {
             );
           })}
         </div>
-      </Section>
-
-      {/* PPTR Table Section */}
-      <Section
-        variant="muted"
-        title="People • Process • Tools • Experience"
-        subtitle="Our integrated approach to delivering mission-critical solutions."
-      >
-        <PPTRTable />
       </Section>
 
       {/* Final CTA */}

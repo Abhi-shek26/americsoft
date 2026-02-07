@@ -42,8 +42,9 @@ const Navbar = () => {
                 whileHover={{ scale: 1.05, rotate: 5 }}
               />
             </div>
-            <span className="font-bold text-base sm:text-lg lg:text-xl text-foreground font-display">
-              {SITE.name}
+            <span className="font-extrabold text-base sm:text-2xl lg:text-3xl font-display">
+              <span className="text-red-600 font-extrabold">AMERIC</span>
+              <span className="text-blue-700 font-extrabold">SOFT</span>
             </span>
           </Link>
 

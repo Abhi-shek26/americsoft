@@ -29,8 +29,9 @@ const Footer = () => {
                   className="w-16 h-16 rounded-xl object-contain   group-hover:shadow-glow-lg transition-all duration-300"
                   whileHover={{ scale: 1.05, rotate: 5 }}
                 />
-                <span className="font-bold text-2xl text-primary-foreground font-display">
-                  {SITE.name}
+                <span className="font-extrabold text-3xl font-display">
+                  <span className="text-red-600 font-extrabold">AMERIC</span>
+                  <span className="text-blue-700 font-extrabold">SOFT</span>
                 </span>
               </Link>
               <p className="text-primary-foreground/60 mb-6 max-w-md leading-relaxed">

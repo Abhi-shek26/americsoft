@@ -34,12 +34,12 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 sm:gap-3 group">
-            <div className="w-8 h-8 sm:w-12 sm:h-12 lg:w-20 lg:h-20 rounded-xl overflow-hidden flex items-center justify-center  transition-all duration-300 group-hover:shadow-glow-lg">
+            <div className="w-8 h-8 sm:w-12 sm:h-12 lg:w-20 lg:h-20 rounded-xl overflow-hidden flex items-center justify-center  transition-all duration-300 ">
               <motion.img
                 src={SITE.logoUrl}
                 alt={SITE.logoAlt}
                 className="w-full h-full object-contain"
-                whileHover={{ scale: 1.05, rotate: 5 }}
+                whileHover={{ scale: 1.05}}
               />
             </div>
             <span className="font-extrabold text-base sm:text-2xl lg:text-3xl font-display">

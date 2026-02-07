@@ -26,8 +26,8 @@ const Footer = () => {
                 <motion.img
                   src={SITE.logoUrl}
                   alt={SITE.logoAlt}
-                  className="w-16 h-16 rounded-xl object-contain   group-hover:shadow-glow-lg transition-all duration-300"
-                  whileHover={{ scale: 1.05, rotate: 5 }}
+                  className="w-16 h-16 rounded-xl object-contain transition-all duration-300"
+                  whileHover={{ scale: 1.05 }}
                 />
                 <span className="font-extrabold text-3xl font-display">
                   <span className="text-red-600 font-extrabold">AMERIC</span>

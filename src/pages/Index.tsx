@@ -27,7 +27,7 @@ const Index = () => {
       <Hero
         headline="AmericSoft Federal"
         subhead="Federal IT & AI Agentic Solutions"
-        body={`U.S.-based federal IT company delivering mission-critical solutions to government agencies and regulated enterprises. Since ${SITE.foundedYear}, we've built defense-grade systems, aviation safety platforms, federal financial solutions, and public health analytics—combining secure technology delivery with deep federal program experience.`}
+        body={`AmericSoft is a U.S.-based technology company delivering mission-critical IT and Agentic AI solutions to government agencies and highly regulated enterprises. Since 2012, we have designed and delivered secure, production-grade systems supporting defense programs, aviation safety, federal financial platforms, and public health analytics. We combine AI-driven automation, data platform modernization, and cloud-native engineering with deep federal program experience to help agencies execute faster, operate securely, and reduce operational risk—while meeting the highest standards for compliance and reliability.`}
         primaryCta={{ text: "View Capabilities", href: "/capability-statement.pdf", external: true }}
         secondaryCta={{ text: "Contact Us", href: "/contact" }}
         showIllustration

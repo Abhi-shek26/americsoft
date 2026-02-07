@@ -26,7 +26,7 @@ const Footer = () => {
                 <motion.img
                   src={SITE.logoUrl}
                   alt={SITE.logoAlt}
-                  className="w-16 h-16 rounded-xl object-contain bg-white shadow-neon group-hover:shadow-glow-lg transition-all duration-300"
+                  className="w-16 h-16 rounded-xl object-contain   group-hover:shadow-glow-lg transition-all duration-300"
                   whileHover={{ scale: 1.05, rotate: 5 }}
                 />
                 <span className="font-bold text-2xl text-primary-foreground font-display">
